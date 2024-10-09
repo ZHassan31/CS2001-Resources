@@ -1,39 +1,55 @@
-body{
+/* General Body Styling */
+body {
     font-family: "Lato", sans-serif;
     max-width: 75rem;
+    /* Limits the content width */
     margin: auto;
+    /* Centers the body */
     height: 100vh;
 }
 
-header{
-    background-image:url(SharingFood.jpg);
+/* Header Styling */
+header {
+    background-image: url('SharingFood.jpg');
+    /* Add quotes around the file name */
     background-repeat: repeat;
     background-size: contain;
     background-position: center;
-    height:200px;
+    height: 200px;
     width: 100%;
     margin: auto;
 }
 
 /**** Menu Style *****************************************/
+
+/* Navigation Styling */
 nav {
+    width: 100%;
+    /* Make sure it takes 100% width of the viewport */
+    margin: 0 auto;
+    /* Centers the nav content */
     border-bottom: 1px solid black;
 }
 
-ul.navlist{
+/* Unordered List Styling for Nav */
+ul.navlist {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    width: 100%;
 }
 
-ul.navlist li
-{
+/* List Items in Nav */
+ul.navlist li {
     float: left;
     display: inline;
+    padding: 0.5rem;
+    color: white;
 }
 
+/* Links in Nav */
 ul.navlist li a {
     display: block;
     color: white;
@@ -42,6 +58,7 @@ ul.navlist li a {
     text-decoration: none;
 }
 
+/* Hover effect on nav links */
 ul.navlist li a:hover {
     background-color: #111;
 }
@@ -56,25 +73,39 @@ main {
     See lecture slides*/
 }
 
-section, aside {
+/* Container to hold aside and main content */
+.main-container {
+    display: flex;
+    /* Flexbox layout */
+    min-height: 100vh;
+    /* Full viewport height */
+}
+
+/* Aside styling */
+aside {
     padding: 0.5rem;
     box-sizing: border-box;
     min-height: 100%;
+    /* Ensure it takes full height */
+    width: 20%;
+    /* Width of aside */
+    background-color: #f0f0f0;
+    /* Just an example background */
 }
 
-aside {
-    /*ToDo: Set width.ToDo: For fluid layouts, use min-width, max-width, and set to relative 
-   values, like 25% of the page.*/ 
-    background-color: #deded8;
-}
-
+/* Main content styling */
 section {
-    /*ToDo: Set width. For fluid layouts, use min-width, max-width, and set to relative 
-   values, like 75% of the page.*/
+    padding: 1rem;
+    width: 80%;
+    /* Remaining width for main content */
+    background-color: #fff;
+    /* Example background */
 }
+
+
 
 /*Styling for search in aside*/
-.search{
+.search {
     display: block;
     width: auto;
     text-align: left;
@@ -86,7 +117,7 @@ section {
     */
     border: 3px solid green;
     padding: 10px;
-  }
+}
 
 /* Styling for text inputs in the form*/
 .textInput {
@@ -97,16 +128,13 @@ section {
 
 /*Styling with a media query - lecture slide 36*/
 @media screen and (max-width: 700px) {
-    /* ToDo: Style aside and section so that they take 100% width on small screens*/
-    aside {
-    
-    }
-    
-    section {
- 
-    }
 
-    #hiddenSection{
+    /* ToDo: Style aside and section so that they take 100% width on small screens*/
+    aside {}
+
+    section {}
+
+    #hiddenSection {
         overflow-wrap: break-word;
     }
 
